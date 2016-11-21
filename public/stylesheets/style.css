@@ -1,0 +1,188 @@
+.arancione
+{
+   /* color:#D97405;*/
+   color:orange;
+}
+
+.rosso
+{
+    color:Red;
+}
+
+.azzurro
+{
+color:#A2C9E6;
+}
+
+.verde
+{
+    color:Green;
+}
+
+.nero
+{
+    color:Black;
+}
+
+.page-header
+{
+    text-align: right;
+    margin: 0px 0 20px;
+}
+
+.fill { 
+        min-height: 100%;
+        height: 100%;
+  padding-top:40px;
+  box-sizing:border-box;
+ }
+    
+    #map {
+        width: 100%;
+        height: 100%;
+        min-height: 100%;
+       
+        display: block;
+  
+    }
+    .row > div {
+  height:100%;
+}
+
+.modal-wide .modal-dialog {
+  width: 80%; /* or whatever you wish */
+}
+
+html,
+body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: 100%;
+  /* Negative indent footer by its height */
+  margin: 0 auto -150px 0;
+  /* Pad bottom by footer height */
+  padding: 0 0 80px 0;
+}
+
+/* Set the fixed height of the footer here */
+#footer {
+  height: 150px;
+  text-align: center;
+}
+
+
+#wrap > .center-container {
+  padding: 50px 0 0 0;
+  margin:0;
+}
+
+#footer > .container {
+  padding-top:5px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.center-container {
+  height:100%;
+}
+
+.center-row {
+  height:100%;
+}
+  
+.pull-right{
+      margin-right: 0px!important; 
+}
+ 
+#footer a > img {
+  width: 120px;
+}
+#footer .social {
+  display: block;
+  margin-top: 10px;
+}
+#footer .social a {
+  margin: 0 8px;
+  padding: 15px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  display: inline-block;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+#footer .social a i {
+  width: 1em;
+}
+#footer .rights {
+  margin-top: 10px;
+}
+#footer .rights a {
+  text-decoration: underline;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  font-weight: bold;
+}
+#footer .rights a:hover {
+  text-decoration: none;
+}
+
+#footer {
+  background: #336799;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #336799 0%, #336799 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #336799), color-stop(100%, #336799));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg, #336799 0%, #336799 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg, #336799 0%, #336799 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg, #336799 0%, #336799 100%);
+  /* IE10+ */
+  background: linear-gradient(-45deg, #336799 0%, #336799 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#336799, endColorstr=#336799, GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+}
+#footer .social a {
+  border: 2px solid #ffffff;
+}
+#footer .social a i {
+  color: #ffffff;
+}
+#footer .social a:hover {
+  background: #ffffff;
+}
+#footer .social a:hover i {
+  color: #336799;
+}
+#footer .rights {
+  color: #ffffff;
+}
+#footer .rights a {
+  color: #ffffff;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+
+form .form-control {
+    border: 2px solid #cccccc;
+    border-radius: 5em;
+    box-shadow: none;
+    color: #337ab7;
+}
