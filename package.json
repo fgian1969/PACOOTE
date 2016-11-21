@@ -1,0 +1,9 @@
+
+{
+  "name": "PACOOTE",
+  "main": "server.js",
+  "dependencies": {
+    "express": "*",
+	"couchbase":"*"
+  }
+}
