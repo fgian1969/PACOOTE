@@ -1,4 +1,4 @@
-xports.config = {
+exports.config = {
   "appName": 'PACOOTE',	
   "debug" : false,
   "hosts": ['localhost:8091'],
