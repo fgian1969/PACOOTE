@@ -1,6 +1,16 @@
 $(document).ready(function () {
 	// target element
-	var el = document.querySelector('#star1');
-	var myRating = rating(el, 2, 2);
+	$("#star1").rateYo({
+    starWidth: "24px"
+  	});
+	$("#star2").rateYo({
+    starWidth: "24px"
+  	});
+	  $("#star3").rateYo({
+    starWidth: "24px"
+  	});
+	  $("#star4").rateYo({
+    starWidth: "24px"
+  	});
 
 });

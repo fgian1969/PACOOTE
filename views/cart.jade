@@ -9,7 +9,7 @@ html(xmlns='http://www.w3.org/1999/xhtml')
 		// Le styles
 		link(href='/css/bootstrap.min.css', rel='stylesheet')
 		link(href='/css/font-awesome.css', rel='stylesheet')
-		link(href='/css/rating.min.css', rel='stylesheet')
+		link(href='/css/jquery.rateyo.min.css', rel='stylesheet')
 		style(type='text/css').
 			body {
 				padding-top: 60px;
@@ -48,11 +48,12 @@ body
 	.container
 		.div.col-md-3
 			.div.col-md-12(style='text-align:center;')
-				label Ciao
-			.div.col-md-12
-				label Ciao
+				label Un tappeto di boschi selvaggi
 			.div.col-md-12(style='text-align:center;')
-				div#star1
+				img(src='/images/boschi.jpg')
+			.div.col-md-12
+				span#star1
+				
 		.div.col-md-3
 			.div.col-md-12(style='text-align:center;')
 				label Ciao
@@ -76,5 +77,5 @@ body
 				div#star4
 
 block script
-	script(src='/js/dist/rating.min.js')
+	script(src='/js/jquery.rateyo.min.js')
 	script(src='/js/cart/cart.js')																
