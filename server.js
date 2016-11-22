@@ -5,8 +5,8 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 //var couchbase = require('couchbase')
 var config = require('./config');
-//var cluster = new couchbase.Cluster('couchbase://localhost/');
-//var bucket = cluster.openBucket('PACOOTE');
+var cluster = new couchbase.Cluster('couchbase://localhost/');
+var bucket = cluster.openBucket('PACOOTE');
 
 //var N1qlQuery = couchbase.N1qlQuery;
 // Create our Express application
