@@ -17,6 +17,10 @@ app.set('view engine', 'jade');
 var port = process.env.PORT || 3000;
 
 app.use(express.static(path.join(__dirname, 'public')));
+//app.use('/js', express.static(__dirname + '/node_modules/five-star-rating/js')); 
+//app.use('/css', express.static(__dirname + '/node_modules/five-star-rating/css')); 
+//app.use('/images', express.static(__dirname + '/node_modules/five-star-rating/img')); 
+//app.use('/fonts', express.static(__dirname + '/node_modules/five-star-rating/fonts')); 
 //app.use('static/js', express.static(path.join(__dirname, 'static/js')));
 //app.use('static/css', express.static(path.join(__dirname, 'static/css')));
 // Create our Express router
@@ -28,7 +32,7 @@ var router = express.Router();
 // http://localhost:3000/api
 
 
-router.get('/', function(req, res) {
+router.get('/', function (req, res) {
   res.render('cart', {
     title: 'Welcome'
   });

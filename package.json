@@ -3,7 +3,7 @@
   "name": "PACOOTE",
   "main": "server.js",
   "dependencies": {
-    "express": "*",
+  "express": "*",
 	"couchbase":"*"
   }
 }
