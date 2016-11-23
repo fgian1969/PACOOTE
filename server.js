@@ -25,7 +25,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 //app.use('static/js', express.static(path.join(__dirname, 'static/js')));
 //app.use('static/css', express.static(path.join(__dirname, 'static/css')));
 // Create our Express router
-//var router = express.Router();
+var router = express.Router();
 // view engine setup
 
 var routes =  requireDir('./routes'); // https://www.npmjs.org/package/require-dir
