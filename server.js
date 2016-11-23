@@ -3,10 +3,11 @@ var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
-var couchbase = require('couchbase')
+var requireDir = require('require-dir');
+//var couchbase = require('couchbase')
 var config = require('./config');
-var cluster = new couchbase.Cluster('couchbase://localhost/');
-var bucket = cluster.openBucket('PACOOTE');
+//var cluster = new couchbase.Cluster('couchbase://localhost/');
+//var bucket = cluster.openBucket('PACOOTE');
 
 //var N1qlQuery = couchbase.N1qlQuery;
 // Create our Express application
@@ -27,20 +28,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 var router = express.Router();
 // view engine setup
 
-
+var routes =  requireDir('./routes'); // https://www.npmjs.org/package/require-dir
+for (var i in routes) app.use('/', routes[i]);
 // Initial dummy route for testing
 // http://localhost:3000/api
 
 
-router.get('/', function (req, res) {
-  res.render('cart', {
-    title: 'Welcome'
-  });
-});
 
-// Register all our routes with /api
-app.use('/', router);
-app.use('/cart', router);
 
 // Start the server
 app.listen(port);
