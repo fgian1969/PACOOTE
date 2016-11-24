@@ -11,6 +11,7 @@ var loremIpsum = require('lorem-ipsum');
   output8 = loremIpsum();
   
 var ipso={
+<<<<<<< HEAD
      ipso1:output1,
      ipso2:output2,
      ipso3:output3,
@@ -19,6 +20,49 @@ var ipso={
      ipso6:output6,
      ipso7:output7,
      ipso8:output8,
+=======
+     ipso1:{
+       code: "cod1",
+       desc:output1,
+       price: "€ 14,72"
+     },
+     ipso2:{
+       code: "cod2",
+       desc:output1,
+       price: "€ 24,32"
+     },
+     ipso3:{
+       code: "cod3",
+       desc:output1,
+       price: "€ 12,28"
+     },
+     ipso4:{
+       code: "cod4",
+       desc:output1,
+       price: "€ 34,22"
+     },
+     ipso5:{
+       code: "cod5",
+       desc:output1,
+       price: "€ 22,12"
+     },
+     ipso6:{
+       code: "cod6",
+       desc:output1,
+       price: "€ 11,13"
+     },
+     ipso7:{
+       code: "cod7",
+       desc:output1,
+       price: "€ 23,43"
+     },
+     ipso8:{
+       code: "cod8",
+       desc:output1,
+       price: "€ 44,12"
+     }
+     
+>>>>>>> 738df8f4dad109483aaef8a6c0957733465e2d6f
 }
 router.get('/cart', function(req, res) {
      res.render('cart', {title: 'Welcome',result:ipso});
