@@ -11,7 +11,6 @@ var loremIpsum = require('lorem-ipsum');
   output8 = loremIpsum();
   
 var ipso={
-<<<<<<< HEAD
      ipso1:output1,
      ipso2:output2,
      ipso3:output3,
@@ -20,7 +19,6 @@ var ipso={
      ipso6:output6,
      ipso7:output7,
      ipso8:output8,
-=======
      ipso1:{
        code: "cod1",
        desc:output1,
@@ -62,7 +60,6 @@ var ipso={
        price: "€ 44,12"
      }
      
->>>>>>> 738df8f4dad109483aaef8a6c0957733465e2d6f
 }
 router.get('/cart', function(req, res) {
      res.render('cart', {title: 'Welcome',result:ipso});
