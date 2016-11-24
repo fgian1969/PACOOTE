@@ -61,11 +61,11 @@ var ipso={
      }
      
 }
-router.get('/cart', function(req, res) {
-     res.render('cart', {title: 'Welcome',result:ipso});
+router.get('/home', function(req, res) {
+     res.render('home', {title: 'Welcome',result:ipso});
 });
 router.get('/', function(req, res, next) {
-
-    next();
+    res.render('home', {title: 'Welcome',result:ipso});
+    //next();
 });
 module.exports = router;

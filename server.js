@@ -29,7 +29,10 @@ var router = express.Router();
 // view engine setup
 
 var routes =  requireDir('./routes'); // https://www.npmjs.org/package/require-dir
+
+
 for (var i in routes) app.use('/', routes[i]);
+
 // Initial dummy route for testing
 // http://localhost:3000/api
 
