@@ -3,6 +3,9 @@ var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
+var cookieParser=require('cookie-parser');
+var bodyParser=require('body-parser');
+
 var requireDir = require('require-dir');
 //var couchbase = require('couchbase')
 var config = require('./config');
@@ -14,6 +17,13 @@ var config = require('./config');
 var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
+//Uso Morgan
+//app.use(logger('dev'));
+//Uso Body Parser
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended:false}));
+app.use(cookieParser());
+app.use(cookieParser(config.secret));
 // Use environment defined port or 3000
 var port = process.env.PORT || 3000;
 

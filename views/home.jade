@@ -1,177 +1,129 @@
-html(xmlns='http://www.w3.org/1999/xhtml')
-	head
-		meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
-		title Pacoote Books Store: Buy Windows 10/8.1/7, Office 2016/2013/2010 Product Key
-		meta(name='ROBOTS', content='NOINDEX, NOFOLLOW')
-		meta(name='keywords', content='Windows 10 product Key, Windows 7 Key Code, buy Windows 7 Product Key, pay4keys@Gmail.com')
-		meta(name='description', content='Pay4keys devotes completely to providing 100% Genuine Windows 10 Product Key, Office 2016 Product Key Codes at pay4keys@gmail.com')
-		meta(name='viewport', content='width=device-width, initial-scale=1.0')
-		// Le styles
-		link(href='/css/bootstrap.min.css', rel='stylesheet')
-		link(href='/css/font-awesome.css', rel='stylesheet')
-		link(href='/css/pacoote.css', rel='stylesheet')
-		link(href='/css/jquery.rateyo.min.css', rel='stylesheet')
-		style(type='text/css').
-			body {
-				padding-top: 60px;
-				padding-bottom: 40px;
-			}
-		script(type='text/javascript', src='/js/jquery-1.11.1.min.js')
-		script(type='text/javascript', src='/js/bootstrap.min.js')
-	
-		// Le HTML5 shim, for IE6-8 support of HTML5 elements
-		//if lt IE 9
-			script(src='//html5shim.googlecode.com/svn/trunk/html5.js')
-body
-	nav.navbar.navbar-inverse.navbar-fixed-top
-		.container
-			.navbar-header
-				button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
-					span.sr-only Toggle navigation
-					span.icon-bar
-					span.icon-bar
-					span.icon-bar
-				a.navbar-brand(href='#') Pacoote
-			#navbar.collapse.navbar-collapse
-				ul.nav.navbar-nav
-					li.active
-						a(href='#') Home
-					li
-						a(href='#about') About
-					li
-						a(href='#contact') Contact	
-				ul.nav.navbar-nav.navbar-right
-					li
-						a(href='#contact')
-							i.fa.fa-shopping-cart(aria-hidden='true')
-							span&nbsp;0			
-					li
-						a(href='#') Register
-					li
-						a(href='#about') Login
+extends layout
+block container
 	.container
 		.div.col-md-3
 			.div.col-md-12(style='text-align:center;')
-				label Un tappeto di boschi selvaggi
+				label #{result.ipso.ipso1.title}
 			.div.col-md-12(style='text-align:center;')
 				img(src='/images/boschi.jpg')
 			.div.col-md-12(style='display:block;margin:auto')
 				span#star1(style='display:block;margin:auto')
 			.div.col-md-12(style='text-align:center;')
-				span #{result.ipso1.desc}
+				span #{result.ipso.ipso1.desc}
 			.div.col-md-12(style='text-align:center;')
-				label Price: #{result.ipso1.price}
+				label Price: #{result.ipso.ipso1.price}
 			.div.col-md-12(style='text-align:center;')
-				button.btn.btn-danger(type='button')
-					i.fa.fa-shopping-cart(aria-hidden='true')
-					|  Add to Cart
+				form(method='post')
+					button.btn.btn-danger(type='submit' name="bookCode" value="code1")
+						i.fa.fa-shopping-cart(aria-hidden='true')
+						|  Add to Cart
 		.div.col-md-3
 			.div.col-md-12(style='text-align:center;')
-				label The Boss
+				label #{result.ipso.ipso2.title}
 			.div.col-md-12(style='text-align:center;')
 				img(src='/images/boss.jpg')
 			.div.col-md-12(style='display:block;margin:auto')
 				span#star2(style='display:block;margin:auto')
 			.div.col-md-12(style='text-align:center;')
-				span #{result.ipso2.desc}
+				span #{result.ipso.ipso2.desc}
 			.div.col-md-12(style='text-align:center;')
-				label Price: #{result.ipso2.price}
+				label Price: #{result.ipso.ipso2.price}
 			.div.col-md-12(style='text-align:center;')
-				button.btn.btn-danger(type='button')
+				button.btn.btn-danger(type='submit' name="bookCode" value="code2")
 					i.fa.fa-shopping-cart(aria-hidden='true')
 					|  Add to Cart
 
 		.div.col-md-3
 			.div.col-md-12(style='text-align:center;')
-				label Lo spazio tra le nuvole
+				label #{result.ipso.ipso3.title}
 			.div.col-md-12(style='text-align:center;')
 				img(src='/images/camilla.jpg')
 			.div.col-md-12(style='display:block;margin:auto')
 				span#star3(style='display:block;margin:auto')
 			.div.col-md-12(style='text-align:center;')
-				span #{result.ipso3.desc}
+				span #{result.ipso.ipso3.desc}
 			.div.col-md-12(style='text-align:center;')
-				label Price: #{result.ipso3.price}
+				label Price: #{result.ipso.ipso3.price}
 			.div.col-md-12(style='text-align:center;')
-				button.btn.btn-danger(type='button')
+				button.btn.btn-danger(type='submit' name="bookCode" value="code3")
 					i.fa.fa-shopping-cart(aria-hidden='true')
 					|  Add to Cart
 
 		.div.col-md-3
 			.div.col-md-12(style='text-align:center;')
-				label Carlo Ancelotti
+				label #{result.ipso.ipso4.title}
 			.div.col-md-12(style='text-align:center;')
 				img(src='/images/celotti.jpg')
 			.div.col-md-12(style='display:block;margin:auto')
 				span#star4(style='display:block;margin:auto')
 			.div.col-md-12(style='text-align:center;')
-				span #{result.ipso4.desc}
+				span #{result.ipso.ipso4.desc}
 			.div.col-md-12(style='text-align:center;')
-				label Price: #{result.ipso4.price}
+				label Price: #{result.ipso.ipso4.price}
 			.div.col-md-12(style='text-align:center;')
-				button.btn.btn-danger(type='button')
+				button.btn.btn-danger(type='submit' name="bookCode" value="code4")
 					i.fa.fa-shopping-cart(aria-hidden='true')
 					|  Add to Cart
 		.div.col-md-12
 			.row&nbsp;			
 		.div.col-md-3
 			.div.col-md-12(style='text-align:center;')
-				label Free States of Jones
+				label #{result.ipso.ipso5.title}
 			.div.col-md-12(style='text-align:center;')
 				img(src='/images/jones.jpg')
 			.div.col-md-12(style='display:block;margin:auto')
 				span#star5(style='display:block;margin:auto')
 			.div.col-md-12(style='text-align:center;')
-				span #{result.ipso5.desc}
+				span #{result.ipso.ipso5.desc}
 			.div.col-md-12(style='text-align:center;')
-				label Price: #{result.ipso5.price}
+				label Price: #{result.ipso.ipso5.price}
 			.div.col-md-12(style='text-align:center;')
-				button.btn.btn-danger(type='button')
+				button.btn.btn-danger(type='submit' name="bookCode" value="code5")
 					i.fa.fa-shopping-cart(aria-hidden='true')
 					|  Add to Cart
 		.div.col-md-3
 			.div.col-md-12(style='text-align:center;')
-				label Lacrime
+				label #{result.ipso.ipso6.title}
 			.div.col-md-12(style='text-align:center;')
 				img(src='/images/lacrime.jpg')
 			.div.col-md-12(style='display:block;margin:auto')
 				span#star6(style='display:block;margin:auto')
 			.div.col-md-12(style='text-align:center;')
-				span #{result.ipso6.desc}
+				span #{result.ipso.ipso6.desc}
 			.div.col-md-12(style='text-align:center;')
-				label Price: #{result.ipso6.price}
+				label Price: #{result.ipso.ipso6.price}
 			.div.col-md-12(style='text-align:center;')
-				button.btn.btn-danger(type='button')
+				button.btn.btn-danger(type='submit' name="bookCode" value="code6")
 					i.fa.fa-shopping-cart(aria-hidden='true')
 					|  Add to Cart
 		.div.col-md-3
 			.div.col-md-12(style='text-align:center;')
-				label Nannini
+				label #{result.ipso.ipso7.title}
 			.div.col-md-12(style='text-align:center;')
 				img(src='/images/nannini.jpg')
 			.div.col-md-12(style='display:block;margin:auto')
 				span#star7(style='display:block;margin:auto')
 			.div.col-md-12(style='text-align:center;')
-				span #{result.ipso7.desc}
+				span #{result.ipso.ipso7.desc}
 			.div.col-md-12(style='text-align:center;')
-				label Price: #{result.ipso7.price}
+				label Price: #{result.ipso.ipso7.price}
 			.div.col-md-12(style='text-align:center;')
-				button.btn.btn-danger(type='button')
+				button.btn.btn-danger(type='submit' name="bookCode" value="code7")
 					i.fa.fa-shopping-cart(aria-hidden='true')
 					|  Add to Cart
 		.div.col-md-3
 			.div.col-md-12(style='text-align:center;')
-				label Una pecora nera al potere
+				label #{result.ipso.ipso8.title}
 			.div.col-md-12(style='text-align:center;')
 				img(src='/images/pecora.jpg')
 			.div.col-md-12(style='display:block;margin:auto')
 				span#star8(style='display:block;margin:auto')
 			.div.col-md-12(style='text-align:center;')
-				span #{result.ipso8.desc}
+				span #{result.ipso.ipso8.desc}
 			.div.col-md-12(style='text-align:center;')
-				label Price: #{result.ipso8.price}
+				label Price: #{result.ipso.ipso8.price}
 			.div.col-md-12(style='text-align:center;')
-				button.btn.btn-danger(type='button')
+				button.btn.btn-danger(type='submit' name="bookCode" value="code8")
 					i.fa.fa-shopping-cart(aria-hidden='true')
 					|  Add to Cart
 block script

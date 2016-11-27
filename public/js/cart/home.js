@@ -1,5 +1,6 @@
-
 $(document).ready(function () {
+	  $("#navbar ul li").removeClass("active");
+    $("#Home").addClass("active");
 	// target element
 	$("#star1").rateYo({
     starWidth: "24px",

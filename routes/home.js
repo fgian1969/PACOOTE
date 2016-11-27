@@ -1,7 +1,13 @@
 var express  = require('express');
 var router   = express.Router();
+var config = require('../config');
+var cookieParser=require('cookie-parser');
 var loremIpsum = require('lorem-ipsum');
-  output1     = loremIpsum();
+var cartItems=0;
+var carrello=[];
+
+
+  output1 = loremIpsum();
   output2 = loremIpsum();
   output3 = loremIpsum();
   output4 = loremIpsum();
@@ -20,52 +26,100 @@ var ipso={
      ipso7:output7,
      ipso8:output8,
      ipso1:{
-       code: "cod1",
+       title:"Un tappeto di boschi selvaggi",
+       code: "code1",
        desc:output1,
        price: "€ 14,72"
      },
      ipso2:{
-       code: "cod2",
+       title:"The Boss",
+       code: "code2",
        desc:output1,
        price: "€ 24,32"
      },
      ipso3:{
-       code: "cod3",
+       title:"Lo spazio fra le nuvole",
+       code: "code3",
        desc:output1,
        price: "€ 12,28"
      },
      ipso4:{
-       code: "cod4",
+       title:"Carlo Ancelotti",
+       code: "code4",
        desc:output1,
        price: "€ 34,22"
      },
      ipso5:{
-       code: "cod5",
+       title:"Free States of Jones",
+       code: "code5",
        desc:output1,
        price: "€ 22,12"
      },
      ipso6:{
-       code: "cod6",
+       title:"Lacrime",
+       code: "code6",
        desc:output1,
        price: "€ 11,13"
      },
      ipso7:{
-       code: "cod7",
+       title:"Nannini",
+       code: "code7",
        desc:output1,
        price: "€ 23,43"
      },
      ipso8:{
-       code: "cod8",
+       title:"Una pecora nera al potere",
+       code: "code8",
        desc:output1,
        price: "€ 44,12"
      }
      
 }
+
+
+
+
+
+function checkCart(req)
+{
+    //var gino=cookieParser.signedCookie("Pacoote", config.secret);
+    console.log(req.cookies.Pacoote);
+    if (req.cookies.code1) {
+      carrello=cookieParser.JSONCookie('Pacoote');
+      console.log(carrello);
+      cartItems=carrello.length;
+    }
+    var myobjectCart={ipso,cartItems};
+    return myobjectCart;
+}
 router.get('/home', function(req, res) {
-     res.render('home', {title: 'Welcome',result:ipso});
+     var objectCart=checkCart(req);
+     res.render('home', {title: 'Welcome',result:objectCart});
+     //Controlla se c'e' un cookie, se si popola
 });
 router.get('/', function(req, res, next) {
-    res.render('home', {title: 'Welcome',result:ipso});
+    var objectCart=checkCart(req);
+    res.render('home', {title: 'Welcome',result:objectCart});
     //next();
 });
+
+router.post('/', function(req, res){
+// console.log(req.body.bookCode)
+  var day = 24 * 60 * 60 * 1000;
+
+  carrello.push(req.body.code1)
+  if (req.body.code1) res.cookie('Pacoote', carrello, { maxAge: day });
+  res.redirect('back');
+});
+
+router.post('/home', function(req, res){
+  //  console.log(req.body.bookCode)
+  var day = 24 * 60 * 60 * 1000;
+
+  carrello.push(req.body.code1)
+  if (req.body.code1) res.cookie('Pacoote', carrello, { maxAge: day });
+  res.redirect('back');
+});
+
+
 module.exports = router;

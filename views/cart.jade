@@ -1,69 +1,194 @@
-html(xmlns='http://www.w3.org/1999/xhtml')
-	head
-		meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
-		title Pay4Keys: Buy Windows 10/8.1/7, Office 2016/2013/2010 Product Key
-		meta(name='ROBOTS', content='NOINDEX, NOFOLLOW')
-		meta(name='keywords', content='Windows 10 product Key, Windows 7 Key Code, buy Windows 7 Product Key, pay4keys@Gmail.com')
-		meta(name='description', content='Pay4keys devotes completely to providing 100% Genuine Windows 10 Product Key, Office 2016 Product Key Codes at pay4keys@gmail.com')
-		meta(name='viewport', content='width=device-width, initial-scale=1.0')
-		// Le styles
-		link(href='/css/bootstrap.min.css', rel='stylesheet')
-		link(href='/css/font-awesome.css', rel='stylesheet')
-		style(type='text/css').
-			body {
-				padding-top: 60px;
-				padding-bottom: 40px;
-			}
-		script(type='text/javascript', src='/js/jquery-1.11.1.min.js')
-		script(type='text/javascript', src='/js/bootstrap.min.js')
-	
-		// Le HTML5 shim, for IE6-8 support of HTML5 elements
-		//if lt IE 9
-			script(src='//html5shim.googlecode.com/svn/trunk/html5.js')
-body
-	nav.navbar.navbar-inverse.navbar-fixed-top
-		.container
-			.navbar-header
-				button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
-					span.sr-only Toggle navigation
-					span.icon-bar
-					span.icon-bar
-					span.icon-bar
-				a.navbar-brand(href='#') Pacoote
-			#navbar.collapse.navbar-collapse
-				ul.nav.navbar-nav
-					li.active
-						a(href='#') Home
-					li
-						a(href='#about') About
-					li
-						a(href='#contact') Contact	
-				ul.nav.navbar-nav.navbar-right
-					li
-						a(href='#') Register
-					li
-						a(href='#about') Login
-
+extends layout
+block container
 	.container
 		.table-responsive
 			table.table
 				thead
 					tr
-						th Title
-						th Description
-						th Valutation
-						th Price
-						th Cart
+						th Image
+						th Titolo
+						th Prezzo Unitario
+						th Q.ta
+						th Subtotal
+						th &nbsp;
 				tbody
+					form(action='/cart/set/', method='post')
+						input(type='hidden', name='csrfmiddlewaretoken', value='PjJE08r7O8ujaasbDmHpBR0nF7OxligU')
+						input(type='hidden', value='166|', name='key')
+						td
+							img(src='/pimages/s/3025/0.jpg', width='100px', height='100px')
+						td
+							a(href='/sql-server-2012-enterprise-p-166.html') SQL Server 2012 Enterprise Key
+							p
+							| SKU: I103025
+							br
+						td $199.99
+						td
+							p
+							input.btn.btn-mini(type='submit', value='+', name='add')
+							|                     1
+							input.btn.btn-mini(type='submit', value='-', name='sub')
+						td $199.99
+						td
+							input.btn-danger.btn-mini(type='submit', value='x', name='del', onclick="return confirm('Are you sure to remove the product: SQL Server 2012 Enterprise ?')")
 					tr
-						td Anna
-						td Pitt
-						td 35
-						td New York
-						td USA		
-					tr
-						td Ferrari
-						td Pitt
-						td 35
-						td New York
-						td USA					
+						td(colspan='3')
+							a.btn.btn-default(href='/') Continue Shopping
+						td Subtotal
+						td
+							strong $232.98
+						td  
+		form.form-horizontal(method='post', action='/cart/')
+			input(type='hidden', name='csrfmiddlewaretoken', value='PjJE08r7O8ujaasbDmHpBR0nF7OxligU')
+			fieldset
+				legend Registered user?
+				.control-group
+					label.control-label(for='id_email') Your Email
+					.controls
+						input#id_email(type='text', name='email')
+						span
+							font(color='red') This field is required.
+				br			
+				button.btn.btn-success.btn-large(type='submit')
+						i.icon-shopping-cart.icon-white
+						| Login
+				br
+				.g-signin2(data-onsuccess='onSignIn')			
+				legend New user ?&nbsp;
+				button.btn.btn-success.btn-large(type='submit')
+						i.icon-shopping-cart.icon-white
+						| Register
+					
+				.control-group
+					label.control-label(for='id_shipping_firstname') Firstname
+					.controls
+						input#id_shipping_firstname(type='text', name='shipping_firstname', maxlength='250', value=' ')
+						p.help-block
+				.control-group
+					label.control-label(for='id_shipping_lastname') Lastname
+					.controls
+						input#id_shipping_lastname(type='text', name='shipping_lastname', maxlength='250', value=' ')
+						p.help-block
+				.control-group
+					label.control-label(for='id_shipping_email') Email
+					.controls
+						input#id_shipping_email(type='text', name='shipping_email', maxlength='250', value=' ')
+						p.help-block
+							| To ensure you receive the key smoothly, please DO leave us a valid email.
+							br
+							| Gmail, Hotmail & Yahoo mail accounts are preferred. Remember to check Spam box in 12 hours after payment.
+				.control-group
+					label.control-label(for='id_shipping_address') Address
+					.controls
+						input#id_shipping_address(type='text', name='shipping_address', maxlength='250', value='none')
+						p.help-block
+				.control-group
+					label.control-label(for='id_shipping_city') City
+					.controls
+						input#id_shipping_city(type='text', name='shipping_city', maxlength='250', value='none')
+						p.help-block
+				.control-group
+					label.control-label(for='id_shipping_state') State
+					.controls
+						input#id_shipping_state(type='text', name='shipping_state', maxlength='250', value='none')
+						p.help-block
+				.control-group
+					label.control-label(for='id_shipping_country') Country
+					.controls
+						select#id_shipping_country(name='shipping_country')
+							option(value='GB') United Kingdom
+							option(value='US') United States
+							option(value='AR') Argentina
+							option(value='AU') Australia
+							option(value='AT') Austria
+							option(value='BS') Bahamas
+							option(value='BH') Bahrain
+							option(value='BE') Belgium
+							option(value='BR') Brazil
+							option(value='BG') Bulgaria
+							option(value='CA') Canada
+							option(value='CL') Chile
+							option(value='CX') Christmas Island
+							option(value='CO') Colombia
+							option(value='CR') Costa Rica
+							option(value='HR') Croatia
+							option(value='CU') Cuba
+							option(value='CY') Cyprus
+							option(value='CZ') Czech Republic
+							option(value='DK') Denmark
+							option(value='DM') Dominica
+							option(value='DO') Dominican Republic
+							option(value='EG') Egypt
+							option(value='EE') Estonia
+							option(value='FJ') Fiji
+							option(value='FI') Finland
+							option(value='FR') France
+							option(value='GE') Georgia
+							option(value='DE') Germany
+							option(value='GR') Greece
+							option(value='HU') Hungary
+							option(value='IS') Iceland
+							option(value='IN') India
+							option(value='IR') Iran, Islamic Republic of
+							option(value='IQ') Iraq
+							option(value='IE') Ireland
+							option(value='IL') Israel
+							option(value='IT') Italy
+							option(value='JP') Japan
+							option(value='JO') Jordan
+							option(value='KE') Kenya
+							option(value='KW') Kuwait
+							option(value='LV') Latvia
+							option(value='LB') Lebanon
+							option(value='LT') Lithuania
+							option(value='LU') Luxembourg
+							option(value='MT') Malta
+							option(value='MX') Mexico
+							option(value='MD') Moldova, Republic of
+							option(value='NL') Netherlands
+							option(value='NZ') New Zealand
+							option(value='NO') Norway
+							option(value='PK') Pakistan
+							option(value='PA') Panama
+							option(value='PE') Peru
+							option(value='PL') Poland
+							option(value='PT') Portugal
+							option(value='RO') Romania
+							option(value='RU') Russian Federation
+							option(value='SG') Singapore
+							option(value='SK') Slovakia
+							option(value='SI') Slovenia
+							option(value='ZA') South Africa
+							option(value='ES') Spain
+							option(value='SE') Sweden
+							option(value='CH') Switzerland
+							option(value='TH') Thailand
+							option(value='TR') Turkey
+							option(value='AE') United Arab Emirates
+							option(value='YE') Yemen
+						p.help-block
+				.control-group
+					label.control-label(for='id_shipping_zipcode') ZipCode
+					.controls
+						input#id_shipping_zipcode(type='text', name='shipping_zipcode', maxlength='16', value='11111')
+						p.help-block
+				.control-group
+					label.control-label(for='id_shipping_phone') Phone
+					.controls
+						input#id_shipping_phone(type='text', name='shipping_phone', maxlength='20', value='11111')
+						p.help-block
+				.control-group
+					label.control-label(for='id_comment') Comment
+					.controls
+						input#id_comment(type='text', name='comment', maxlength='300', value='none')
+						p.help-block
+				.form-actions
+					button.btn.btn-success.btn-large.pull-right(type='submit')
+						i.icon-shopping-cart.icon-white
+						| PROCEED TO CHECKOUT
+					br
+					br
+block script
+	script(src='/js/cart/cart.js')
+
+				

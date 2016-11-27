@@ -4,5 +4,6 @@ exports.config = {
   "hosts": ['localhost:8091'],
   "user": 'Administrator',
   "password": 'elena2000',
-  "bucket" : 'PACOOTE'
+  "bucket" : 'PACOOTE',
+  "secret":'Viva la figa e chi la spisiga'
 };
