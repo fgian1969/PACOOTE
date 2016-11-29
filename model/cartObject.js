@@ -5,7 +5,7 @@ var cartObject = function () {
        "img":"/images/boschi.jpg",
        "code": "code1",
        "desc":output1,
-       "price": "€ 14,72",
+       "price": "14.72",
        "qta":0
      },
      {
@@ -13,7 +13,7 @@ var cartObject = function () {
        "img":"/images/boss.jpg",
        "code": "code2",
        "desc":output1,
-       "price": "€ 24,32",
+       "price": "24.32",
        "qta":0
      },
      {
@@ -21,7 +21,7 @@ var cartObject = function () {
        "img":"/images/camilla.jpg",
        "code": "code3",
        "desc":output1,
-       "price": "€ 12,28",
+       "price": "12.28",
        "qta":0
      },
      {
@@ -29,7 +29,7 @@ var cartObject = function () {
        "img":"/images/celotti.jpg",
        "code": "code4",
        "desc":output1,
-       "price": "€ 34,22",
+       "price": "34.22",
        "qta":0
      },
      {
@@ -37,7 +37,7 @@ var cartObject = function () {
        "img":"/images/jones.jpg",
        "code": "code5",
        "desc":output1,
-       "price": "€ 22,12",
+       "price": "22.12",
        "qta":0
      },
      {
@@ -45,7 +45,7 @@ var cartObject = function () {
        "img":"/images/lacrime.jpg",
        "code": "code6",
        "desc":output1,
-       "price": "€ 11,13",
+       "price": "11.13",
        "qta":0
      },
      {
@@ -53,7 +53,7 @@ var cartObject = function () {
        "img":"/images/nannini.jpg",
        "code": "code7",
        "desc":output1,
-       "price": "€ 23,43",
+       "price": "23.43",
        "qta":0
      },
      {
@@ -61,7 +61,7 @@ var cartObject = function () {
        "img":"/images/pecora.jpg",
        "code": "code8",
        "desc":output1,
-       "price": "€ 44,12",
+       "price": "44.12",
        "qta":0
      }],
      "qtaTot":
@@ -82,9 +82,9 @@ cartObject.checkCart=function(req,callback){
 		for (var prop in ipso.data.books) {
 			qta+=ipso.data.books[prop].qta;
 		}
-		console.log(qta);
+		//console.log(qta);
 		ipso.data.qtaTot.qta=qta;
-		console.log(ipso.data.qtaTot.qta);
+		//console.log(ipso.data.qtaTot.qta);
 		callback(null,ipso)
 	}
 	else

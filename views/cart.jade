@@ -12,7 +12,9 @@ block container
 						th Subtotal
 						th &nbsp;
 				tbody
+					-var valore=0;
 					each book in result.books
+						-valore+=mul(book.price, book.qta); 
 						if book.qta != "0"
 							tr
 								form(action='/cart/set/', method='post')
@@ -21,14 +23,15 @@ block container
 								td
 									label #{book.title}
 								td
-									label #{book.price}
+									label #{repl(book.price)}
 								td
 									p
 									input.btn.btn-mini(type='submit', value='+', name='add')
 									|#{book.qta}
 									input.btn.btn-mini(type='submit', value='-', name='sub')
 								td
-									label (#{book.qta}*#{book.price})
+								
+									label #{repl(mul(book.price, book.qta))}
 								td
 									input.btn-danger.btn-mini(type='submit', value='x', name='del', onclick="return confirm('Are you sure to remove the product: #{book.title} ?')")
 					tr
@@ -36,7 +39,7 @@ block container
 							a.btn.btn-default(href='/') Continue Shopping
 						td Subtotal
 						td
-							strong $232.98
+							strong #{repl(valore)}
 						td  
 		form.form-horizontal(method='post', action='/cart/')
 			input(type='hidden', name='csrfmiddlewaretoken', value='PjJE08r7O8ujaasbDmHpBR0nF7OxligU')

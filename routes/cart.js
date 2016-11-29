@@ -20,5 +20,19 @@ router.get('/cart', function(req, res, next) {
   }
 });
 
+router.post('/cart/set', function(req, res, next) {
+   if (req.cookies.Pacoote!=undefined)
+  {
+    cartObject.checkCart(req,function(err,ipso){
+       res.render('cart', {result:ipso.data});
+    });
+  }
+  else
+  {
+     var ipso=new cartObject();
+     res.render('cart', {result:ipso.data});
+  }
+});
+
 
 module.exports = router;

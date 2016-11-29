@@ -24,7 +24,16 @@ html(xmlns='http://www.w3.org/1999/xhtml')
 		// Le HTML5 shim, for IE6-8 support of HTML5 elements
 		//if lt IE 9
 			script(src='//html5shim.googlecode.com/svn/trunk/html5.js')
+
 body
+	-   var mul = function(a,b){
+		-   return ( Number(a) * Number(b) );		
+	-}
+
+	-   var repl = function(a){
+		-if (typeof a === 'string') return ( "€ " + a.replace('.',',') );
+		-return ( "€ " + a.toFixed(2).toString().replace('.',',') );	
+	-}
 	nav.navbar.navbar-inverse.navbar-fixed-top
 		.container
 			.navbar-header
