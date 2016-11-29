@@ -84,10 +84,6 @@ var ipso={
      
 }
 
-
-
-
-
 function checkCart(req)
 {
   cartItems=0;
