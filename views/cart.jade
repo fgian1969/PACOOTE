@@ -12,25 +12,25 @@ block container
 						th Subtotal
 						th &nbsp;
 				tbody
-					form(action='/cart/set/', method='post')
-						input(type='hidden', name='csrfmiddlewaretoken', value='PjJE08r7O8ujaasbDmHpBR0nF7OxligU')
-						input(type='hidden', value='166|', name='key')
-						td
-							img(src='/pimages/s/3025/0.jpg', width='100px', height='100px')
-						td
-							a(href='/sql-server-2012-enterprise-p-166.html') SQL Server 2012 Enterprise Key
-							p
-							| SKU: I103025
-							br
-						td $199.99
-						td
-							p
-							input.btn.btn-mini(type='submit', value='+', name='add')
-							|                     1
-							input.btn.btn-mini(type='submit', value='-', name='sub')
-						td $199.99
-						td
-							input.btn-danger.btn-mini(type='submit', value='x', name='del', onclick="return confirm('Are you sure to remove the product: SQL Server 2012 Enterprise ?')")
+					each book in result.books
+						if book.qta != "0"
+							tr
+								form(action='/cart/set/', method='post')
+								td
+									img(src='#{book.img}')
+								td
+									label #{book.title}
+								td
+									label #{book.price}
+								td
+									p
+									input.btn.btn-mini(type='submit', value='+', name='add')
+									|#{book.qta}
+									input.btn.btn-mini(type='submit', value='-', name='sub')
+								td
+									label (#{book.qta}*#{book.price})
+								td
+									input.btn-danger.btn-mini(type='submit', value='x', name='del', onclick="return confirm('Are you sure to remove the product: #{book.title} ?')")
 					tr
 						td(colspan='3')
 							a.btn.btn-default(href='/') Continue Shopping

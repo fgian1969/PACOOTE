@@ -29,9 +29,10 @@ block container
 			.div.col-md-12(style='text-align:center;')
 				label Price: #{result.books[1].price}
 			.div.col-md-12(style='text-align:center;')
-				button.btn.btn-danger(type='submit' name="bookCode" value="code2")
-					i.fa.fa-shopping-cart(aria-hidden='true')
-					|  Add to Cart
+				form(method='post')
+					button.btn.btn-danger(type='submit' name="bookCode" value="code2")
+						i.fa.fa-shopping-cart(aria-hidden='true')
+						|  Add to Cart
 
 		.div.col-md-3
 			.div.col-md-12(style='text-align:center;')
@@ -45,9 +46,10 @@ block container
 			.div.col-md-12(style='text-align:center;')
 				label Price: #{result.books[2].price}
 			.div.col-md-12(style='text-align:center;')
-				button.btn.btn-danger(type='submit' name="bookCode" value="code3")
-					i.fa.fa-shopping-cart(aria-hidden='true')
-					|  Add to Cart
+				form(method='post')
+					button.btn.btn-danger(type='submit' name="bookCode" value="code3")
+						i.fa.fa-shopping-cart(aria-hidden='true')
+						|  Add to Cart
 
 		.div.col-md-3
 			.div.col-md-12(style='text-align:center;')
@@ -61,9 +63,10 @@ block container
 			.div.col-md-12(style='text-align:center;')
 				label Price: #{result.books[3].price}
 			.div.col-md-12(style='text-align:center;')
-				button.btn.btn-danger(type='submit' name="bookCode" value="code4")
-					i.fa.fa-shopping-cart(aria-hidden='true')
-					|  Add to Cart
+				form(method='post')			
+					button.btn.btn-danger(type='submit' name="bookCode" value="code4")
+						i.fa.fa-shopping-cart(aria-hidden='true')
+						|  Add to Cart
 		.div.col-md-12
 			.row&nbsp;			
 		.div.col-md-3
@@ -78,9 +81,10 @@ block container
 			.div.col-md-12(style='text-align:center;')
 				label Price: #{result.books[4].price}
 			.div.col-md-12(style='text-align:center;')
-				button.btn.btn-danger(type='submit' name="bookCode" value="code5")
-					i.fa.fa-shopping-cart(aria-hidden='true')
-					|  Add to Cart
+				form(method='post')
+					button.btn.btn-danger(type='submit' name="bookCode" value="code5")
+						i.fa.fa-shopping-cart(aria-hidden='true')
+						|  Add to Cart
 		.div.col-md-3
 			.div.col-md-12(style='text-align:center;')
 				label #{result.books[5].title}
@@ -93,9 +97,10 @@ block container
 			.div.col-md-12(style='text-align:center;')
 				label Price: #{result.books[5].price}
 			.div.col-md-12(style='text-align:center;')
-				button.btn.btn-danger(type='submit' name="bookCode" value="code6")
-					i.fa.fa-shopping-cart(aria-hidden='true')
-					|  Add to Cart
+				form(method='post')
+					button.btn.btn-danger(type='submit' name="bookCode" value="code6")
+						i.fa.fa-shopping-cart(aria-hidden='true')
+						|  Add to Cart
 		.div.col-md-3
 			.div.col-md-12(style='text-align:center;')
 				label #{result.books[6].title}
@@ -108,9 +113,10 @@ block container
 			.div.col-md-12(style='text-align:center;')
 				label Price: #{result.books[6].price}
 			.div.col-md-12(style='text-align:center;')
-				button.btn.btn-danger(type='submit' name="bookCode" value="code7")
-					i.fa.fa-shopping-cart(aria-hidden='true')
-					|  Add to Cart
+				form(method='post')
+					button.btn.btn-danger(type='submit' name="bookCode" value="code7")
+						i.fa.fa-shopping-cart(aria-hidden='true')
+						|  Add to Cart
 		.div.col-md-3
 			.div.col-md-12(style='text-align:center;')
 				label #{result.books[7].title}
@@ -123,9 +129,10 @@ block container
 			.div.col-md-12(style='text-align:center;')
 				label Price: #{result.books[7].price}
 			.div.col-md-12(style='text-align:center;')
-				button.btn.btn-danger(type='submit' name="bookCode" value="code8")
-					i.fa.fa-shopping-cart(aria-hidden='true')
-					|  Add to Cart
+				form(method='post')
+					button.btn.btn-danger(type='submit' name="bookCode" value="code8")
+						i.fa.fa-shopping-cart(aria-hidden='true')
+						|  Add to Cart
 block script
 	script(src='/js/jquery.rateyo.min.js')
 	script(src='/js/cart/home.js')																
