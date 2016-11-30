@@ -17,23 +17,25 @@ block container
 						-valore+=mul(book.price, book.qta); 
 						if book.qta != "0"
 							tr
-								form(action='/cart/set/', method='post')
-								td
-									img(src='#{book.img}')
-								td
-									label #{book.title}
-								td
-									label #{repl(book.price)}
-								td
-									p
-									input.btn.btn-mini(type='submit', value='+', name='add')
-									|#{book.qta}
-									input.btn.btn-mini(type='submit', value='-', name='sub')
-								td
-								
-									label #{repl(mul(book.price, book.qta))}
-								td
-									input.btn-danger.btn-mini(type='submit', value='x', name='del', onclick="return confirm('Are you sure to remove the product: #{book.title} ?')")
+								form(action='/cart', method='post')
+									input(type='hidden', name='code', value='#{book.code}')
+									td
+										img(src='#{book.img}')
+									td
+										label #{book.title}
+									td
+										label #{repl(book.price)}
+									td
+										p
+										
+										input.btn.btn-mini(type='submit', value='+', name='add')
+										|#{book.qta}
+										input.btn.btn-mini(type='submit', value='-', name='sub')
+									td
+									
+										label #{repl(mul(book.price, book.qta))}
+									td
+										input.btn-danger.btn-mini(type='submit', value='x', name='del', onclick="return confirm('Are you sure to remove the product: #{book.title} ?')")
 					tr
 						td(colspan='3')
 							a.btn.btn-default(href='/') Continue Shopping
